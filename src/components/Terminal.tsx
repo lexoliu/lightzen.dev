@@ -36,7 +36,7 @@ const Terminal: React.FC = () => {
           <div className="space-y-4">
             {/* First command */}
             <div>
-              <span className="text-blue-400">root@lightzen:~$ </span>
+              <span className="text-blue-400">root@lightzen.dev:~$ </span>
               <ReactTyped
                 strings={['cat company.txt']}
                 typeSpeed={30}
