@@ -59,6 +59,7 @@ const Terminal: React.FC = () => {
                 {asciiArt.split('\n').map((line, index) => (
                   <pre className="max-w-6xl text-sm">
                     <ReactTyped
+                      key={index}
                       strings={[line]}
                       typeSpeed={10}
                       showCursor={false}
