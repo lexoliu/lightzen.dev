@@ -16,25 +16,23 @@ const Terminal: React.FC = () => {
   const [descriptionCompleted, setDescriptionCompleted] = useState(false);
 
   return (
-    <div className={`relative max-w-4xl mx-auto p-2`}>
+    <div className="relative max-w-full p-2 font-mono">
       {/* Terminal window frame */}
-      <div className="shadow-2xl m-3 bg-black/30 rounded-lg">
+      <div className="shadow-black shadow-2xl m-3 bg-black/30 rounded-lg backdrop-blur-[20px]">
         {/* Terminal header */}
-        <div className="flex items-center px-4 py-3 rounded-t-lg">
-          <div className="flex space-x-2">
+        <div className="flex items-center px-4 py-3 rounded-t-lg shadow-2xl">
+          <div className="flex space-x-2 ">
             <div className="w-3 h-3 bg-red-500 rounded-full"></div>
             <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
             <div className="w-3 h-3 bg-green-500 rounded-full"></div>
           </div>
           <div className="flex-1 text-center">
-            <span className="text-gray-400 text-sm font-mono p-2">
-              root@lightzen.dev
-            </span>
+            <span className="text-white text-sm p-2">root@lightzen.dev</span>
           </div>
         </div>
 
         {/* Terminal content */}
-        <div className="p-6 font-mono text-green-400 bg-black/30 rounded-b-lg">
+        <div className="p-6 text-green-400 bg-black/30 rounded-b-lg">
           <div className="space-y-4">
             {/* First command */}
             <div>
@@ -54,10 +52,10 @@ const Terminal: React.FC = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5, duration: 0.5 }}
-                className="space-y-1"
+                className="space-y-0"
               >
                 {asciiArt.split('\n').map((line, index) => (
-                  <pre className="max-w-6xl text-sm">
+                  <pre className="text-[0.3rem] sm:text-xs md:text-sm lg:text-base">
                     <ReactTyped
                       key={index}
                       strings={[line]}

@@ -1,13 +1,12 @@
 import React from 'react';
-import Background from './Background';
+import Background from './RainbowBackground';
 import Terminal from './Terminal';
 
 const App: React.FC = () => {
   return (
     <>
       <Background />
-
-      <div className="absolute inset-0 flex items-center justify-center min-h-screen">
+      <div className="absolute inset-0 flex items-center justify-center min-h-screen bg-black/30">
         <Terminal />
       </div>
     </>
