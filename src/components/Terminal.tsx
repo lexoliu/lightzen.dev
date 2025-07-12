@@ -16,7 +16,7 @@ const Terminal: React.FC = () => {
   const [descriptionCompleted, setDescriptionCompleted] = useState(false);
 
   return (
-    <div className="relative max-w-full p-2 font-mono">
+    <div className="relative w-full max-w-[75ch] p-2 font-mono select-none">
       {/* Terminal window frame */}
       <div className="shadow-black shadow-2xl m-3 bg-black/30 rounded-lg backdrop-blur-[20px]">
         {/* Terminal header */}
@@ -75,12 +75,13 @@ const Terminal: React.FC = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0, duration: 0.3 }}
-                    className="text-blue-300"
+                    className="text-purple-300"
                   >
                     <ReactTyped
                       strings={[
                         'Small but beautiful indie software development',
                       ]}
+                      className="select-text"
                       showCursor={false}
                       typeSpeed={10}
                       onComplete={() => setDescriptionCompleted(true)}
@@ -93,9 +94,10 @@ const Terminal: React.FC = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.5, duration: 0.3 }}
-                    className="text-gray-400"
+                    className="text-blue-300"
                   >
                     <ReactTyped
+                      className="select-text"
                       strings={[
                         'Crafting interesting apps with passion and precision',
                       ]}
